@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*
+ * 1. 请用 if ... else 编写一个程序，用于计算体质指数 BMI，并打印结果。 BMI = 体重(kg)除以身高(m)的平方
+ */
+
 public class BMI
 {
     public static void main(String[] args)
