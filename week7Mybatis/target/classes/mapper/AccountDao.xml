@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ync.mapper.AccountDao">
+
+    <!--插入student对象-->
+    <insert id="insert" parameterType="com.ync.entity.Account">
+        insert into account(id,name,money,createtime,updatetime) values (#{id},#{name},#{money},#{createtime},#{updatetime})
+    </insert>
+
+    <!--查询所有-->
+    <select id="findAll" resultType="com.ync.entity.Account">
+        select * from account
+    </select>
+
+    <!-- 通过id删除 -->
+    <delete id="deleteById" parameterType="String">
+        delete from account where id = #{id}
+    </delete>
+
+    <!-- 通过id查询 -->
+    <select id="findById" parameterType="String" resultType="com.ync.entity.Account">
+        select * from account where id = #{id}
+    </select>
+
+    <!-- 更新 -->
+    <update id="update" parameterType="com.ync.entity.Account">
+        update account set name = #{name},money=#{money},updatetime=#{updatetime} where id=#{id}
+    </update>
+
+</mapper>
