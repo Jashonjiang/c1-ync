@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    name: ync_work
+    type: com.alibaba.druid.pool.DruidDataSource # 自定义数据库连接池
+    username: root
+    password: ync1998.
+    driver-class-name: com.mysql.jdbc.Driver # 自定义驱动
+    url: jdbc:mysql://127.0.0.1:3306/ync_work?serverTimezone=UTC
+mybatis:
+  mapper-locations: classpath*:/mybatis/*Mapper.xml # 单词千万不要写错了
